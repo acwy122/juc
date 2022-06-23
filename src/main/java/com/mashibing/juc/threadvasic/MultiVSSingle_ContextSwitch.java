@@ -85,6 +85,15 @@ public class MultiVSSingle_ContextSwitch {
      *
      * W/C  是等待时间与计算时间的比率
      *
+     * 那么等待时间与计算时间的比率  是如何得知的呢？
+     *
+     * 本地可以通过一个工具  profiler  得知  性能分析工具
+     * Jprofiler  收费工具
+     *
+     * 远程在服务器上该如何得知
+     *
+     * 可以用阿里的Arthas  性能分析
+     *
      */
     private static void m3() throws InterruptedException {
 
@@ -123,8 +132,16 @@ public class MultiVSSingle_ContextSwitch {
 
     }
 
-
-
+    /**
+     * 总结：
+     * 1、cpu
+     * 2、线程调度
+     * 3、线程的数目是不是越多越好
+     * 4、线程多少个最合适
+     *
+     * @param args
+     * @throws InterruptedException
+     */
     public static void main(String[] args) throws InterruptedException {
         m1();
         m2();
