@@ -72,10 +72,23 @@ public class MultiVSSingle_ContextSwitch {
      * 一万个线程进行计算
      *
      * 线程并不是越大越好
+     *
+     * 可以根据cpu的核数  计算出比较合适的线程数
+     *
+     * 线程数量的计算公式
+     *
+     * N threads = N cpu * U cpu * (1+W/C)
+     *
+     * N cpu  是处理器的核数  可以通过  Runtime.getRuntime().availableProcessors()-ssors();得到
+     *
+     * U cpu  是期望cpu的利用率
+     *
+     * W/C  是等待时间与计算时间的比率
+     *
      */
     private static void m3() throws InterruptedException {
 
-        final int thresdCount = 10000;
+        final int thresdCount = 32;
         Thread[] threads = new Thread[thresdCount];
         double[] results = new double[thresdCount];
         final int segmentCount = nums.length / thresdCount;
@@ -85,7 +98,7 @@ public class MultiVSSingle_ContextSwitch {
         for (int i=0;i<thresdCount;i++){
             int m = i;
             threads[i] = new Thread(() ->{
-               for (int j=m*segmentCount;j<(m+1)*segmentCount && j<nums.length;j++){
+               for (int j=m*segmentCount;j<(m+1)*segmentCount && j<nums.length;j++){//这里肯定算错了，得到的不是正确值
                    results[m] += nums[j];
                }
             });
