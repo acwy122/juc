@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
-public class MultiVSSingle_ContextSwitch {
+public class T1_MultiVSSingle_ContextSwitch {
 
     private static double[] nums = new double[1_0000_0000];
     private static Random r = new Random();

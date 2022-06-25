@@ -2,7 +2,7 @@ package com.mashibing.juc.threadvasic;
 
 import java.util.concurrent.*;
 
-public class HowToCreateThread {
+public class T2_HowToCreateThread {
 
     /**
      * 1、继承Thread 重写run
@@ -62,8 +62,28 @@ public class HowToCreateThread {
         System.out.println(s);
         service.shutdown();//关闭
 
+
+
+
+
     }
 
+
+    /**
+     *
+     * java的线程状态
+     *
+     * new : 线程刚刚创建，还没有启动
+     * runnable: 可运行状态，由线程调度可以安排执行：包括两个  一个running    一个ready   thread.yieid
+     *
+     * waiting：等待背唤醒
+     * timed waiting:隔一段时间够自动唤醒
+     *
+     * blocked：被阻塞 正在等待锁   被synchronized锁住了
+     * terminated：线程结束
+     *
+     *
+     */
 
 
 }
