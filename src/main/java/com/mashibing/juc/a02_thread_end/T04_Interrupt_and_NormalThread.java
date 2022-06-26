@@ -26,4 +26,23 @@ public class T04_Interrupt_and_NormalThread {
 
     }
 
+    /**
+     *
+     * 并发编程三大特性
+     * 必问  必备
+     *
+     * 可见性（visibility）
+     *
+     *
+     *
+     * 有序性（ordering）
+     *
+     *
+     *
+     * 原子性（atomicity）
+     *
+     *
+     *
+     */
+
 }
