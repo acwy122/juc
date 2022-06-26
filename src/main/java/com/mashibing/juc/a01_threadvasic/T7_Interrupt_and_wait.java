@@ -1,6 +1,4 @@
-package com.mashibing.juc.threadvasic;
-
-import javax.management.ObjectName;
+package com.mashibing.juc.a01_threadvasic;
 
 public class T7_Interrupt_and_wait {
 

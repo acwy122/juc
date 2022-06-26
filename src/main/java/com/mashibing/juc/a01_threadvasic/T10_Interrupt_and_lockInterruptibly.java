@@ -1,8 +1,8 @@
-package com.mashibing.juc.threadvasic;
+package com.mashibing.juc.a01_threadvasic;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-public class T9_Interrupt_and_lock {
+public class T10_Interrupt_and_lockInterruptibly {
 
     private static ReentrantLock lock = new ReentrantLock();
 
@@ -11,9 +11,7 @@ public class T9_Interrupt_and_lock {
             lock.lock();
 
             try {
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                SleepHelper.sleepSeconds(10);
             } finally {
                 lock.unlock();
             }
@@ -27,6 +25,9 @@ public class T9_Interrupt_and_lock {
         Thread t2 = new Thread(() -> {
             lock.lock();
             try{
+                lock.lockInterruptibly();
+            }catch (InterruptedException e){
+                e.printStackTrace();
             }finally {
                 lock.unlock();
             }

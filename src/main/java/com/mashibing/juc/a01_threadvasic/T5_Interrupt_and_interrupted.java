@@ -1,4 +1,4 @@
-package com.mashibing.juc.threadvasic;
+package com.mashibing.juc.a01_threadvasic;
 
 public class T5_Interrupt_and_interrupted {
 
