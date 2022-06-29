@@ -31,8 +31,9 @@ public class T01_Disorder {
 
             CountDownLatch latch = new CountDownLatch(2);
 
-            Thread one  = new Thread(() -> {
-                public void run {
+            Thread one  = new Thread(new Runnable() {
+                @Override
+                public void run() {
                     a=1;
                     x=b;
 
