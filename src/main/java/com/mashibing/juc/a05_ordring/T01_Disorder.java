@@ -6,6 +6,15 @@ import java.util.concurrent.CountDownLatch;
 /**
  * 程序真的是按照顺序执行的吗
  *
+ *
+ * 第二条指令先于第一条指令执行完成
+ *
+ * 在两条指令中无依赖关系
+ *
+ * 乱序存在的条件：
+ * 不影响单线程的最终一致性
+ * as -- if -- serial
+ *
  */
 public class T01_Disorder {
 
