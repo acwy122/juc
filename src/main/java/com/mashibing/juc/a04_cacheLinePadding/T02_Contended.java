@@ -47,4 +47,9 @@ public class T02_Contended {
         System.out.println((System.nanoTime() - start)/100_0000);
     }
 
+
+    /**
+     * 程序真的是按照顺序执行的吗
+     *
+     */
 }
