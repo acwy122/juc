@@ -6,6 +6,7 @@ import java.io.IOException;
  * new 一个对象的时候  有一个中间状态
  *
  * 创建对象的过程，指令重排序
+ * this对象溢出
  *
  */
 public class T03_ThisEscape {
