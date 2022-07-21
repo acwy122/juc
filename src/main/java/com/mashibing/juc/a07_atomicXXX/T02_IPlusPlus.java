@@ -30,4 +30,8 @@ public class T02_IPlusPlus {
 
         System.out.println(n);
     }
+
+    /**
+     * synchronized与三大特性
+     */
 }
